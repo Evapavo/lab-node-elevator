@@ -4,18 +4,17 @@ class Elevator {
     this.MAXFLOOR = 10;
     this.requests = [];
     this.direction = 'up';
-    //this.interval
+    this.interval = 0;
+
   }
 
   start() {
-    setInterval (()=> this.update(),1000)
+    this.Interval = setInterval (()=> this.update(),1000)
   ;
 }
-
-
-
   stop() {
-    console.log('hola');
+    clearInterval (this.Interval);
+
   }
 
   update() {
